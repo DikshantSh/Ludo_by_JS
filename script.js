@@ -73,6 +73,7 @@ function Home_red1() {
       red_increment_counter = 0;
       eject_counter = 0;
       home_red1_counter = 1;
+      win_check();
       return;
     }
   }
@@ -94,6 +95,7 @@ function Home_red1() {
       red_increment_counter = 0;
       eject_counter = 0;
       home_red1_counter = 1;
+      win_check();
       return;
     }
   }
@@ -119,6 +121,7 @@ function Home_red2() {
     red_increment_counter = 0;
     eject_counter = 0;
     home_red2_counter = 1;
+    win_check();
     return;
   }
 }
@@ -158,6 +161,7 @@ function Home_blue1() {
       blue_increment_counter = 0;
       eject_counter = 0;
       home_blue1_counter = 1;
+      win_check();
       return;
     }
   }
@@ -183,6 +187,7 @@ function Home_blue1() {
       blue_increment_counter = 0;
       eject_counter = 0;
       home_blue1_counter = 1;
+      win_check();
       return;
     }
   }
@@ -214,6 +219,7 @@ function Home_blue2() {
     blue_increment_counter = 0;
     eject_counter = 0;
     home_blue2_counter = 1;
+    win_check();
     return;
   }
 }
@@ -467,6 +473,7 @@ function increment_red1() {
     win_check();
     return;
   }
+  win_check();
 
   home_red1_counter = 0;
 
@@ -501,6 +508,7 @@ function increment_red2() {
     win_check();
     return;
   }
+  win_check();
 
   document
     .querySelector(`.cell-${playerA_red2_presentstate}`)
@@ -533,6 +541,7 @@ function increment_blue1() {
     return;
   }
   home_blue1_counter = 0;
+  win_check();
 
   document
     .querySelector(`.cell-${playerB_blue1_presentstate}`)
@@ -563,6 +572,7 @@ function increment_blue2() {
     win_check();
     return;
   }
+  win_check();
   document
     .querySelector(`.cell-${playerB_blue2_presentstate}`)
     .querySelector(".blue2").style.display = "none";
@@ -713,10 +723,8 @@ function roll() {
           playerA_red1_presentstate + roll_dice > 28 &&
           playerA_red2_presentstate + roll_dice > 28
         ) {
-          if(roll_dice===6)
-          alert("No move possible, Re-roll.");
-          else 
-          alert("No move possible, Dice passes to Player B.");
+          if (roll_dice === 6) alert("No move possible, Re-roll.");
+          else alert("No move possible, Dice passes to Player B.");
 
           red_increment_counter = 0;
         }
@@ -781,10 +789,8 @@ function roll() {
           playerB_blue1_presentstate < 15 &&
           playerB_blue2_presentstate < 15
         ) {
-          if(roll_dice===6)
-          alert("No move possible, Re-roll.");
-          else 
-          alert("No move possible, Dice passes to Player B.");
+          if (roll_dice === 6) alert("No move possible, Re-roll.");
+          else alert("No move possible, Dice passes to Player A.");
           blue_increment_counter = 0;
         }
       }, 1000);
