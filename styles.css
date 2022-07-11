@@ -19,7 +19,8 @@
 
 @media screen and (max-width: 850px) {
     .page {
-        flex-direction: column;
+    transform: scale(0.7);
+    flex-direction: column;
     }
 
     .hide {
@@ -262,7 +263,7 @@ background-color: grey;
 }
 
 .page {
-    transform: scale(0.8);
+    transform: scale(0.7);
 }
 
 .cell-28 .red1 {

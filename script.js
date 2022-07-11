@@ -55,7 +55,7 @@ function Home_red1() {
         alert("Can't move this token, Eject another token.");
         red_increment_counter = 0;
       } else {
-        alert("No move available, dice passes to Player B.");
+        alert("No move possible, dice passes to Player B.");
         red_increment_counter = 0;
         eject_counter = 0;
       }
@@ -136,7 +136,7 @@ function Home_blue1() {
         alert("Can't move this token, Eject another token.");
         blue_increment_counter = 0;
       } else {
-        alert("No move available, dice passes to Player B.");
+        alert("No move possible, dice passes to Player B.");
         blue_increment_counter = 0;
         eject_counter = 0;
       }
